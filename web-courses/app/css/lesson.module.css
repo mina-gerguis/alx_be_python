@@ -1,0 +1,124 @@
+.container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: var(--bg-color);
+  overflow-y: auto;
+}
+
+.lesson {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lesson h1 {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.lesson h2 {
+  font-size: 1.8rem;
+  color: var(--secondary-color);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.lesson h3 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.section p {
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.section ul,
+.section ol {
+  line-height: 1.8;
+  color: var(--text-color);
+  margin-bottom: 15px;
+  padding-right: 30px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+
+.navigation {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nextButton,
+.prevButton {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.nextButton:hover,
+.prevButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.prevButton {
+  background-color: var(--secondary-color);
+}
+
+.prevButton:hover {
+  background-color: #1a1c24;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .lesson {
+    padding: 25px;
+  }
+
+  .lesson h1 {
+    font-size: 2rem;
+  }
+
+  .lesson h2 {
+    font-size: 1.5rem;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+}

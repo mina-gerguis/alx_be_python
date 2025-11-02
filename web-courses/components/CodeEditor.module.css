@@ -1,0 +1,105 @@
+.editorContainer {
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.editorTitle {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 12px 20px;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.editorTabs {
+  display: flex;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 20px;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.tab:hover {
+  background-color: rgba(4, 170, 109, 0.1);
+}
+
+.activeTab {
+  background-color: var(--white);
+  font-weight: bold;
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.codeSection {
+  padding: 0;
+}
+
+.codeInput {
+  width: 100%;
+  min-height: 300px;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  resize: vertical;
+  background-color: #f8f9fa;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.previewSection {
+  padding: 0;
+  background-color: var(--white);
+}
+
+.preview {
+  width: 100%;
+  min-height: 300px;
+  border: none;
+  background-color: var(--white);
+}
+
+.editorActions {
+  padding: 15px 20px;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.resetButton {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+.resetButton:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .codeInput {
+    font-size: 0.85rem;
+    min-height: 250px;
+  }
+
+  .preview {
+    min-height: 250px;
+  }
+}
